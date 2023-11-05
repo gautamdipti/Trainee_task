@@ -26,8 +26,7 @@
                 <th>Id</th>
                 <th>Task Details</th>
                 <th>Task Type</th>
-                <th>Username</th>
-                <th>User Email</th>
+                <th>Assigned Users</th>
                 <th>Status</th>
                 <th>Action</th>
               </tr>

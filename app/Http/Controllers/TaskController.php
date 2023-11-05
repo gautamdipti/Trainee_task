@@ -47,7 +47,7 @@ class TaskController extends Controller
         ->select('tasks.*','users.name','users.email')
         ->paginate('2');
 
-        dd($tasks);
+       
         
         return view('task.index',compact('tasks'));
     }

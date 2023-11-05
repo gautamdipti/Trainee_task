@@ -31,9 +31,11 @@ class UserController extends Controller
 
         User::create($request->all());
 
-        return back()->with('msg','User Created Successfully');
+    //     return back()->with('msg','User Created Successfully');
 
-       return redirect('users.users', compact('shows'));
+    //    return redirect('user-list', compact('shows'));
+    
+    return redirect('user-list')->with('msg','User Created Successfully!');
 
         
     }

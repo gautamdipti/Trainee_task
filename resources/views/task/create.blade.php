@@ -8,13 +8,17 @@
 </div>
 @endif
 <div class="container">
+<div class="row d-flex justify-content-center">
+
+   <div class="col-sm-6 m-2 p-3" id="box">
+
+<center><h4>Add Task</h4></center>
 <form class="well form-horizontal" action="{{ url('task/store') }}" method="post">
   @csrf
     <fieldset>
-        <legend>Add Task</legend>
         <div class="form-group">
-            <label class="col-md-4 control-label">Task-Details</label>
-            <div class="col-md-4 ">
+            <label class="col-md-5 control-label">Task-Details</label>
+            <div class="col-md-12 ">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                     <textarea name="taskdetails" class="form-control" type="text"> 
@@ -24,8 +28,8 @@
         </div>
      
         <div class="form-group">
-            <label class="col-md-4 control-label">Task-Type</label>
-            <div class="col-md-4 ">
+            <label class="col-md-5 control-label">Task-Type</label>
+            <div class="col-md-12 ">
                 <div class="input-group">
                     <select name="tasktype" class="form-control" id="">
                     <option value="">----Select Type----</option>
@@ -39,8 +43,8 @@
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Status</label>
-            <div class="col-md-4 ">
+            <label class="col-md-5 control-label">Status</label>
+            <div class="col-md-12 ">
             <select name="status" class="form-control" id="">
             <option value="">----Select Status----</option>
                         <option value="1">Pending</option>
@@ -50,28 +54,23 @@
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Select User</label>
-            <div class="col-md-4 ">
+            <label class="col-md-5 control-label">Select User</label>
+            <div class="col-md-12 ">
             <select name="user" class="form-control" id="">
             <option value="">----Select User----</option>
                         @foreach($users as $user)
-                        
-                        
-
+                
                         <option value="{{$user->id}}">{{$user->name}}</option>
-
 
                         @endforeach
             
-</select>
+     </select>
             </div>
         </div>  
-    
-
         <div class="form-group">
-            <label class="col-md-4 control-label"></label>
-            <div class="col-md-4">
-                <button type="submit" class="btn btn-primary login-button">Submit</button>
+            <label class="col-md-5 control-label"></label>
+            <div class="col-md-12">
+                <button type="save" id="save"  class="btn btn-primary login-button">Save</button>
             </div>
         </div>
 

@@ -6,13 +6,19 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title"><strong>Users</strong></h3>
+          <h3 class="card-title"><strong>Users</strong> <a href="{{ url('add-task') }}" class="btn btn-info" style="float:right; font-size:17px;">Add Task</a></h3>
           <div class="text-right">
           </div>
           
         </div>
         <!-- /.card-header -->
         <div class="card-body table-responsive p-0" style="height: 300px;">
+        @if ($message = Session::get('msg'))
+<div class="alert alert-success alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>    
+    <strong>{{ $message }}</strong>
+</div>
+@endif
           <table class="table table-head-fixed text-nowrap">
             <thead>
               <tr>
@@ -21,7 +27,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Mobile</th>
-                <th>Action</th>
+               
               </tr>
             </thead>
             <tbody>
@@ -32,7 +38,7 @@
                 <td>{{ $value->name }}</td>
                 <td>{{ $value->email }}</td>
                 <td>{{ $value->mobile }}</td>
-                <td>Action</td>
+               
               </tr>
               @endforeach
               @endif
